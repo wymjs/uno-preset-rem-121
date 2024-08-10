@@ -1,0 +1,45 @@
+{
+	"name": "@wymjs/uno-preset-rem-121",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "將數值 1:1 轉換成對應數值的 rem 數",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"readme.md"
+	],
+	"scripts": {
+		"build-package": "tsup-node index.ts --platform node --format esm --dts --clean",
+		"publish-package": "pnpm run build-package && npm publish --access publish",
+		"lint": "eslint --fix --no-ignore --max-warnings=0",
+		"format": "prettier --cache --write",
+		"prepare": "husky install"
+	},
+	"homepage": "https://github.com/wymjs/uno-preset-rem-121",
+	"keywords": [
+		"wymjs",
+		"typescript",
+		"uno"
+	],
+	"license": "ISC",
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,vue}": "pnpm run lint",
+		"*.{js,jsx,ts,tsx,vue,css,sass,scss,less}": "pnpm run format"
+	},
+	"dependencies": {
+		"@unocss/core": "^0.58.6"
+	},
+	"devDependencies": {
+		"@types/node": "^20.9.0",
+		"@typescript-eslint/eslint-plugin": "^7.1.1",
+		"@typescript-eslint/parser": "^7.1.1",
+		"eslint": "^8.57.0",
+		"eslint-plugin-unused-imports": "^3.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.1.0",
+		"prettier": "^3.1.0",
+		"typescript": "^5.2.2",
+		"tsup": "^8.0.1"
+	}
+}
