@@ -11,7 +11,7 @@
 	],
 	"scripts": {
 		"build-package": "tsup-node index.ts --platform node --format esm --dts --clean",
-		"publish-package": "pnpm run build-package && npm publish --access publish",
+		"publish-package": "pnpm run build-package && npm publish --access public",
 		"lint": "eslint --fix --no-ignore --max-warnings=0",
 		"format": "prettier --cache --write",
 		"prepare": "husky install"
