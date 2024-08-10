@@ -1,6 +1,6 @@
 {
 	"name": "@wymjs/uno-preset-rem-121",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"description": "將數值 1:1 轉換成對應數值的 rem 數",
 	"main": "dist/index.js",
